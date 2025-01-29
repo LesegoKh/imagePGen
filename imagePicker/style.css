@@ -1,0 +1,61 @@
+body {
+    height:100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image-container img{
+margin: 10px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+background-color: lightgray;
+width: 300px;
+height: 300px;
+}
+
+.text-container {
+    height: 300px;
+    width: 350px;
+    background-color: aliceblue;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+    margin-top:10px;
+    border-radius:10px;
+}
+
+.butn {
+    margin-bottom: 15px;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    background-color: rgb(160, 127, 192);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+    text-decoration: none;
+    overflow: hidden;
+    color: whitesmoke;
+    position: relative;
+    border-radius: 10px;
+}
+
+.butn::before {
+    position: absolute;
+    content: "";
+    background-color: rgb(252,218,27);
+    width: 0;
+    height: 0;
+    left: var(--xPos);
+    top: var(--yPos);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 0.5s, height 0.5s;
+}
+
+.butn:hover::before {
+    width: 250px;
+    height: 250px;
+}
+.butn span {
+    position: relative;
+    z-index: 1;
+}
